@@ -9,7 +9,28 @@
   </head>
 
   <body>
+    <style>
+      #validation-input {
+        border: 3px solid #bdbdbd;
+      }
+
+      #validation-input.valid {
+        border-color: #4caf50;
+      }
+
+      #validation-input.invalid {
+        border-color: #f44336;
+      }
+    </style>
+
     <p><a href="/">На главную</a></p>
+
+    <input
+      type="text"
+      id="validation-input"
+      data-length="6"
+      placeholder="Введи 6 символов"
+    />
 
     <script src="./js/task-06.js" type="module"></script>
   </body>
