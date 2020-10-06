@@ -20,6 +20,10 @@ const categories = document.querySelectorAll('.item');
 const categoriesQuantity = categories.length;
 console.log(`В списке ${categoriesQuantity} категории.`);
 
-const titleEl = document.querySelectorAll('h2');
-// console.log(titleEl);
-titleEl.forEach(title => console.log(`Категория: ${title.textContent}`));
+// console.log(categories);
+categories.forEach(categories => {
+  console.log(`Категория: ${categories.children[0].textContent}`),
+    console.log(
+      `Количество элементов: ${categories.children[1].children.length}`,
+    );
+});
