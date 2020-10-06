@@ -6,6 +6,8 @@ const textEl = document.querySelector('#text');
 // console.log(resizePanelEl.value);
 // console.log(resizePanelEl.value.length);
 
-resizePanelEl.oninput = function () {
-  textEl.setAttribute('style', `font-size: ${resizePanelEl.value}px`);
+resizePanelEl.oninput = function (event) {
+  // console.log(event);
+  textEl.setAttribute('style', `font-size: ${event.target.value}px`);
+  // console.log(textEl.getAttribute('style'));
 };

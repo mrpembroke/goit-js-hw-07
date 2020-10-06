@@ -5,7 +5,12 @@ inputEl.addEventListener('blur', onInputBlur);
 // console.log(inputEl.value.length);
 
 function onInputBlur(event) {
-  if (inputEl.value.length === 6) {
+  const inputValueLength = event.target.value.length;
+  const validValueLength = parseInt(inputEl.dataset.length);
+
+  // console.log(inputEl.dataset.length);
+
+  if (inputValueLength === validValueLength) {
     inputEl.classList.add('valid');
     inputEl.classList.remove('invalid');
   } else {
